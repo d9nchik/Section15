@@ -47,6 +47,7 @@ public class SimpleCalculator extends Application {
         TextField secondNumber = new TextField();
         secondNumber.setPrefColumnCount(prefColumnCount);
         TextField result = new TextField();
+        result.setEditable(false);
         result.setPrefColumnCount(prefColumnCount);
         legend.getChildren().addAll(new Text("Number 1: "), firstNumber, new Text("Number 2: "), secondNumber,
                 new Text("Result: "), result);
