@@ -25,7 +25,7 @@ public class RectangleMovement extends Application {
         rectangle.setFill(Color.WHITE);
         rectangle.setStroke(Color.BLACK);
         Pane e1 = new Pane(rectangle);
-        e1.setPrefHeight(170);
+        e1.prefHeightProperty().bind(pane.heightProperty().subtract(40));
         pane.getChildren().add(e1);
 
         HBox buttons = new HBox();
