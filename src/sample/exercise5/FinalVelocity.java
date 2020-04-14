@@ -41,8 +41,8 @@ public class FinalVelocity extends Application {
         pane.add(calculate, 1, 4);
         GridPane.setHalignment(calculate, HPos.RIGHT);
 
-        calculate.setOnAction(e -> result.setText((Double.parseDouble(velocity.getText()) +
-                Double.parseDouble(acceleration.getText()) * Double.parseDouble(time.getText())) + ""));
+        calculate.setOnAction(e -> result.setText(String.format("%.2f", (Double.parseDouble(velocity.getText()) +
+                Double.parseDouble(acceleration.getText()) * Double.parseDouble(time.getText())))));
 
         Scene scene = new Scene(pane);
         primaryStage.setScene(scene);
