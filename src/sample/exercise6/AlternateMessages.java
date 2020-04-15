@@ -29,11 +29,10 @@ public class AlternateMessages extends Application {
         scene.setOnMouseClicked(e -> {
             final boolean contains = pane.getChildren().contains(text[0]);
             pane.getChildren().clear();
-            if (contains) {
+            if (contains)
                 pane.getChildren().add(text[1]);
-            } else {
+            else
                 pane.getChildren().add(text[0]);
-            }
         });
         primaryStage.setScene(scene);
         primaryStage.setTitle("Exercise 6");
