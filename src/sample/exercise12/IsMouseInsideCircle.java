@@ -35,7 +35,7 @@ public class IsMouseInsideCircle extends Application {
             if (circle.contains(new Point2D(e.getX(), e.getY())))
                 text.setText("Mouse point is inside the circle");
             else
-                text.setText("Mouse point is not inside circle");
+                text.setText("Mouse point is outside circle");
         });
     }
 }
