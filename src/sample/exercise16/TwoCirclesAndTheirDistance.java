@@ -58,12 +58,9 @@ public class TwoCirclesAndTheirDistance extends Application {
         updateText();
     }
 
-    private int getDistance() {
-        return (int) Math.sqrt(Math.pow(circle1.getCenterX() - circle2.getCenterX(), 2) +
-                Math.pow(circle1.getCenterY() - circle2.getCenterY(), 2));
-    }
-
     private void updateText() {
-        text.setText("" + getDistance());
+        int distance = (int) Math.sqrt(Math.pow(circle1.getCenterX() - circle2.getCenterX(), 2) +
+                Math.pow(circle1.getCenterY() - circle2.getCenterY(), 2));
+        text.setText("" + distance);
     }
 }
