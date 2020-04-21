@@ -8,18 +8,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Walk extends Pane {
-    private final Polyline path = new Polyline();
-    private int borderSize;
-    private int amountOfBorders;
-    private int x;
-    private int y;
-    private boolean isEnd;
+    protected final Polyline path = new Polyline();
+    protected int borderSize;
+    protected int amountOfBorders;
+    protected int x;
+    protected int y;
+    protected boolean isEnd;
 
     public Walk() {
         redraw();
     }
 
-    private void drawFragment() {
+    protected void drawFragment() {
         ArrayList<Point2D> point2DS = getNeighbours();
         if (!isEnd) {
             Point2D myPoint = point2DS.get(0);
