@@ -7,7 +7,7 @@ public class SimpleTest {
         Border border = new Border();
         for (int i = 10; i <= 80; i += 5) {
             border.setAmountOfBorders(i);
-            WalkWithCounter counter = new WalkWithCounter(border);
+            WalkWithCounter counter = new WalkWithCounter(1, i);
             for (int j = 1; j < 10_000; j++) {
                 counter.redraw();
             }

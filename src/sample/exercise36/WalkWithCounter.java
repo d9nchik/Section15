@@ -3,7 +3,6 @@ package sample.exercise36;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Polyline;
-import sample.exercise34.Border;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,15 +14,15 @@ public class WalkWithCounter extends Pane {
     protected int x;
     protected int y;
     protected boolean isEnd;
-    private Border border = new Border();
     private int deadEndPaths = 0;
 
     public WalkWithCounter() {
         redraw();
     }
 
-    public WalkWithCounter(Border border) {
-        this.border = border;
+    public WalkWithCounter(int borderSize, int amountOfBorders) {
+        this.borderSize = borderSize;
+        this.amountOfBorders = amountOfBorders;
     }
 
     protected void drawFragment() {
@@ -71,10 +70,7 @@ public class WalkWithCounter extends Pane {
         isEnd = false;
         getChildren().clear();
         path.getPoints().clear();
-
-        borderSize = border.getBorderSize();
-        amountOfBorders = border.getAmountOfBorders();
-        getChildren().addAll(border, path);
+        getChildren().addAll(path);
         y = x = amountOfBorders / 2 * borderSize;
         drawMultiple();
     }
