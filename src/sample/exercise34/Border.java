@@ -6,7 +6,7 @@ import javafx.scene.shape.Rectangle;
 
 public class Border extends Pane {
     private final int borderSize = 16;
-    private final int amountOfBorders = 16;
+    private int amountOfBorders = 16;
 
     public Border() {
         for (int i = 0; i < amountOfBorders; i++) {
@@ -25,5 +25,9 @@ public class Border extends Pane {
 
     public int getAmountOfBorders() {
         return amountOfBorders;
+    }
+
+    public void setAmountOfBorders(int amountOfBorders) {
+        this.amountOfBorders = amountOfBorders;
     }
 }
